@@ -1,1 +1,37 @@
 // Navigation code here
+
+.main-navigation {
+    .fit();
+    height: 100px;
+    background: @wild-sand;
+    margin: 0 auto;
+    border-bottom: 1px solid @sea-shell;
+    padding-top: 20px;
+    position: fixed;
+    opacity:.9;
+
+    .nav-container {
+        height: 100%;
+        
+        .logo {
+            display: flex;
+            justify-content: center;
+            font-size: 4rem;
+            color: black;
+            padding-bottom: 10px;
+        }
+
+        .navigation {
+            display: flex;
+            justify-content: space-evenly;
+            
+            a {
+                font-size: 1.6rem;
+                color: @header-font-color;
+                text-decoration: none;
+                .bold();
+            }
+        }
+        
+    }
+}

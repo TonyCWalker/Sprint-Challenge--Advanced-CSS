@@ -1,1 +1,42 @@
 // Mixins Here
+
+.fit {
+    width: 100%;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.bdr-radius {
+    border-radius: 5px;
+}
+
+.center(){
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button(@width, @height, @bg-color, @font-color, @font-size) {
+    .bdr-radius();
+    .center();
+    width: @width;
+    height: @height;
+    background-color: @bg-color;
+    color: @font-color;
+    .bold();
+    cursor: pointer;
+    font-size: @font-size;
+    border: 1px solid @main-border-color;
+
+    @media @phone {
+        .fit();
+        height: 65px;
+    }
+
+    &:hover {
+        color: @bg-color;
+        background-color: @font-color;
+    }
+}
